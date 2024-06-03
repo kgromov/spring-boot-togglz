@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: spring-boot-togglz
+togglz:
+  feature-enums: org.kgromov.togglz.features.TemperatureMetricsFeature
+  features:
+    GOODBYE:
+      enabled: true
+    FAHRENHEIT:
+      enabled: true
+    CUSTOM_DATE_FEATURE:
+      enabled: true
+  cache:
+    time-to-live: 10_000
+    enabled: true
+  console:
+    enabled: true
+    secured: false  
+    path: /togglz-console
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
